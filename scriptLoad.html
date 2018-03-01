@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      let script1= document.createElement("script");
+      script1.type = "text/javascript";
+      script1.src = "js/1.js";
+
+      console.dir(script1);
+      script1.onloadstart= function(){
+        console.log(new Date());
+        console.log(script1.readyState);
+      };
+      script1.onload = function(){
+        console.log(script1.readyState);
+        console.log(new Date());
+        // alert("loaded")
+      }
+      script1.onerror = function(e){
+        console.log(e)
+      }
+      document.body.appendChild(script1)
+    </script>
+  </body>
+</html>
