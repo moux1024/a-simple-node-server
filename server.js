@@ -21,7 +21,7 @@ function start(){
          response.writeHead(200, {'Content-Type': 'text/html'});
 
          // 响应文件内容
-         response.write(data.toString());
+         response.write(data);
       }
       //  发送响应数据
       response.end();
